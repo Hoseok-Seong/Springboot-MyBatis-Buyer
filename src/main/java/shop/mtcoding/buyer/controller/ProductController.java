@@ -25,10 +25,13 @@ public class ProductController {
     }
 
     @GetMapping("/product/{id}")
-    public String findOne(@PathVariable int id, Model model) {
+    public String detail(@PathVariable int id, Model model) {
         Product product = productRepository.findById(id);
-        model.addAttribute("product", product);
-        return "product/detail";
+        if (product == null) {
+            return "redirect:/notfound";
+        } else {
+            model.addAttribute("product", product);
+            return "product/detail";
+        }
     }
-
 }

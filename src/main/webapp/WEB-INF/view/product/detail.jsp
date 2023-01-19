@@ -13,9 +13,9 @@
             <tr>
                 <td>${product.id}</td>
                 <td>${product.name}</td>
-                <td>${product.price}</td>
-                <td>${product.qty}</td>
-                <td>${product.createdAt}</td>
+                <td>${product.price}원</td>
+                <td>${product.qty}개</td>
+                <td>${product.createdAtToString}</td>
             </tr>
         </table>
         <%@ include file="../layout/footer.jsp" %>
