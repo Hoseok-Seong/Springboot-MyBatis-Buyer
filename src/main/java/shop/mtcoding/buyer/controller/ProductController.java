@@ -19,8 +19,8 @@ public class ProductController {
 
     @GetMapping({ "/", "/product" })
     public String home(Model model) {
-        List<Product> productlist = productRepository.findAll();
-        model.addAttribute("productlist", productlist);
+        List<Product> productList = productRepository.findAll();
+        model.addAttribute("productList", productList);
         return "product/list";
     }
 
