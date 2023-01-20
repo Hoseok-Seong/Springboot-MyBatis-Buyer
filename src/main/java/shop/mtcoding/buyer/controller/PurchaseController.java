@@ -40,7 +40,7 @@ public class PurchaseController {
         // 2. 서비스 호출
         int result = purchaseService.구매하기(principal.getId(), productId, count);
 
-        if (result != 1) {
+        if (result == -1) {
             return "redirect:/notfound";
         }
 
